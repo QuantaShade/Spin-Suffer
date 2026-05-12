@@ -1,4 +1,4 @@
-import { useI18n, type Lang } from "./provider/langProvider";
+import { useI18n, type Lang } from "../provider/langProvider";
 
 
 const LANGS: { code: Lang; label: string; flag: string }[] = [

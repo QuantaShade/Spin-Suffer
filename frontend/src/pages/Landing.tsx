@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { Play, Users, Zap, Trophy, RotateCcw, Skull } from "lucide-react";
-import { useI18n } from "@/components/provider/langProvider";
+import { useI18n } from "@/provider/langProvider";
 import { Link } from "react-router-dom";
 
 const WHEEL_COLORS = [
@@ -182,7 +182,7 @@ export default function HeroSection() {
           className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
         >
           <Link
-            to="#play"
+            to="/setUp"
             className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#ff146e] px-8 py-4 text-lg font-bold text-white shadow-lg shadow-[#ff146e]/30 transition-all duration-200 hover:bg-[#e0105f] hover:shadow-[#ff146e]/50 hover:-translate-y-0.5 active:translate-y-0"
           >
             <Play className="h-5 w-5" />
@@ -190,7 +190,7 @@ export default function HeroSection() {
           </Link>
           <Link
             to="#how"
-            className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/20 bg-white/5 px-8 py-4 text-lg font-bold text-white transition-all duration-200 hover:border-white/40 hover:bg-white/10"
+            className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 bg-gray-100 dark:border-white/20 dark:bg-white/5 px-8 py-4 text-lg font-bold text-black dark:text-white hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
           >
             {h.howItWorks}
           </Link>

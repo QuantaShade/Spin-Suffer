@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Landing from "./pages/Landing";
 import NotFound from "./pages/NotFound";
+import SetupPage from "./pages/SetupPage";
+import SpinPage from "./pages/SpinPage";
 
 
 const router = createBrowserRouter([
@@ -12,6 +14,14 @@ const router = createBrowserRouter([
             {
                 index: true,
                 element: <Landing />
+            },
+            {
+                path: "/setUp",
+                element: <SetupPage />
+            },
+            {
+                path: "play",
+                element: <SpinPage />
             }
         ]
     },

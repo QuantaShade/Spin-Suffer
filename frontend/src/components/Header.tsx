@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Skull, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { gameName } from "@/lib";
-import { useI18n } from "./provider/langProvider";
+import { useI18n } from "../provider/langProvider";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { Theme } from "./mode-toggle";
 

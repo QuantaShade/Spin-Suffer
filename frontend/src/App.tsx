@@ -1,7 +1,7 @@
 import { ThemeProvider } from './components/theme-provider'
 import { RouterProvider } from 'react-router-dom'
 import router from './router'
-import { I18nProvider } from './components/provider/langProvider'
+import { I18nProvider } from './provider/langProvider'
 
 function App() {
   return (
