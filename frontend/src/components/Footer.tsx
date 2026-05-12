@@ -68,7 +68,7 @@ function Footer() {
 
       <div className="border-t border-white/10 py-5 text-center text-sm text-gray-500">
         Made with{" "}
-        <FaHeart className="inline text-[#ff167b]" /> by Mustafa
+        <FaHeart className="inline text-[#ff167b]" /> by aisha nuur sh abuukar
       </div>
 
     </footer>

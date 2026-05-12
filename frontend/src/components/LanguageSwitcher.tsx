@@ -21,7 +21,6 @@ export default function LanguageSwitcher() {
               ? "bg-[#ff146e] text-white shadow-lg shadow-[#ff146e]/30"
               : "text-gray-400 hover:text-white"
           }`}
-          style={{ fontFamily: "'Permanent Marker', cursive" }}
         >
           <span>{flag}</span>
           <span>{label}</span>

@@ -7,7 +7,7 @@ export const so = {
   },
   hero: {
     badge: "Ciyaarta Xafladda ee Ugu Fiican",
-    title1: "Wareejin &",
+    title1: "Wareejin iyo",
     title2: "Dhibaato",
     subtitle: "Wareejin gaariga. Aqbal qaddaadkaaga. Naxariis ma jirto, baxsasho ma jirto.",
     startPlaying: "Bilow Ciyaarta",
@@ -92,8 +92,8 @@ export const ar = {
   },
   hero: {
     badge: "أفضل لعبة حفلات على الإطلاق",
-    title1: "أدر &",
-    title2: "اعانِ",
+    title1: "أدر و",
+    title2: "عاني",
     subtitle: "أدر العجلة. اقبل مصيرك. لا رحمة، لا هروب.",
     startPlaying: "ابدأ اللعب",
     howItWorks: "كيف تعمل",

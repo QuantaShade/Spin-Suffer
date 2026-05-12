@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { Play, Users, Zap, Trophy, RotateCcw, Skull } from "lucide-react";
 import { useI18n } from "@/components/provider/langProvider";
+import { Link } from "react-router-dom";
 
 const WHEEL_COLORS = [
   "#ff146e", "#ffffff", "#ff146e", "#1a1a1a",
@@ -151,8 +152,7 @@ export default function HeroSection() {
         {/* Badge */}
         <div
           ref={badgeRef}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#ff146e]/40 bg-[#ff146e]/10 px-4 py-2 text-sm text-[#ff146e]"
-          style={{ fontFamily: "'Caveat', cursive", fontSize: "1rem" }}
+          className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#ff146e]/40 bg-[#ff146e]/10 px-4 py-2 text-lg text-[#ff146e]"
         >
           <Skull className="h-4 w-4" />
           {h.badge}
@@ -161,8 +161,7 @@ export default function HeroSection() {
         {/* Title */}
         <h1
           ref={titleRef}
-          className="text-6xl font-black leading-tight md:text-8xl text-white"
-          style={{ fontFamily: "'Permanent Marker', cursive" }}
+          className="text-6xl font-black leading-tight md:text-8xl"
         >
           {h.title1}
           <br />
@@ -173,7 +172,6 @@ export default function HeroSection() {
         <p
           ref={subtitleRef}
           className="mt-5 max-w-md text-xl text-gray-400 mx-auto lg:mx-0"
-          style={{ fontFamily: "'Caveat', cursive" }}
         >
           {h.subtitle}
         </p>
@@ -183,21 +181,19 @@ export default function HeroSection() {
           ref={buttonsRef}
           className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
         >
-          <a
-            href="#play"
+          <Link
+            to="#play"
             className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#ff146e] px-8 py-4 text-lg font-bold text-white shadow-lg shadow-[#ff146e]/30 transition-all duration-200 hover:bg-[#e0105f] hover:shadow-[#ff146e]/50 hover:-translate-y-0.5 active:translate-y-0"
-            style={{ fontFamily: "'Permanent Marker', cursive" }}
           >
             <Play className="h-5 w-5" />
             {h.startPlaying}
-          </a>
-          <a
-            href="#how"
+          </Link>
+          <Link
+            to="#how"
             className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/20 bg-white/5 px-8 py-4 text-lg font-bold text-white transition-all duration-200 hover:border-white/40 hover:bg-white/10"
-            style={{ fontFamily: "'Permanent Marker', cursive" }}
           >
             {h.howItWorks}
-          </a>
+          </Link>
         </div>
 
         {/* Stats */}
@@ -208,8 +204,9 @@ export default function HeroSection() {
           {statItems.map((s, i) => (
             <div
               key={i}
-              className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300"
-              style={{ fontFamily: "'Caveat', cursive", fontSize: "1rem" }}
+              className="flex items-center gap-2 rounded-full border border-gray-300 bg-gray-100
+              dark:border-white/10 dark:bg-white/5
+              dark px-4 py-2 text-sm"
             >
               <span className="text-[#ff146e]">{s.icon}</span>
               {s.label}
@@ -263,7 +260,6 @@ export default function HeroSection() {
                     dominantBaseline="middle"
                     fontSize="10"
                     fontWeight="900"
-                    fontFamily="'Permanent Marker', cursive"
                     fill={textColor}
                     transform={`rotate(${seg.textRotation}, ${seg.tx}, ${seg.ty})`}
                   >
@@ -281,7 +277,6 @@ export default function HeroSection() {
               dominantBaseline="middle"
               fontSize="10"
               fontWeight="bold"
-              fontFamily="'Permanent Marker', cursive"
               fill="white"
             >
               SPIN
@@ -304,7 +299,6 @@ export default function HeroSection() {
                 style={{
                   background: isBgPink ? "#ff146e" : "#ffffff",
                   color: isBgPink ? "#ffffff" : "#1a1a1a",
-                  fontFamily: "'Permanent Marker', cursive",
                   boxShadow: isBgPink ? "0 0 16px rgba(255,20,110,0.5)" : "0 4px 12px rgba(0,0,0,0.4)",
                 }}
               >
@@ -320,7 +314,6 @@ export default function HeroSection() {
           onClick={handleSpin}
           disabled={isSpinning}
           className="flex items-center gap-3 rounded-xl border-2 border-[#ff146e] bg-[#ff146e] px-10 py-4 text-xl font-bold text-white shadow-lg shadow-[#ff146e]/30 transition-all duration-200 hover:bg-transparent hover:text-[#ff146e] disabled:opacity-50 disabled:cursor-not-allowed"
-          style={{ fontFamily: "'Permanent Marker', cursive" }}
         >
           <RotateCcw className={`h-6 w-6 ${isSpinning ? "animate-spin" : ""}`} />
           {isSpinning ? h.spinning : h.spinBtn}
@@ -333,16 +326,15 @@ export default function HeroSection() {
             className="w-full max-w-xs rounded-xl border border-[#ff146e]/30 bg-white/5 p-6 text-center backdrop-blur"
             style={{ opacity: 0 }}
           >
-            <p className="mb-1 text-xs tracking-widest text-gray-500" style={{ fontFamily: "'Caveat', cursive" }}>
+            <p className="mb-1 text-xs tracking-widest text-gray-500">
               {h.challengeLabel}
             </p>
             <p
               className="mb-2 text-3xl text-[#ff146e]"
-              style={{ fontFamily: "'Permanent Marker', cursive" }}
             >
               {currentChallenge.label}
             </p>
-            <p className="text-lg text-gray-300" style={{ fontFamily: "'Caveat', cursive" }}>
+            <p className="text-lg text-gray-300">
               {currentChallenge.text}
             </p>
           </div>
